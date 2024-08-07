@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <title>Document</title>
+
+</head>
+
+<body>
+  <div class="container   p-3 rounded-xl ms-9 mt-7 bg-blue-700">
+    <div class="inp-box w-full flex  justify-evenly flex-col items-center rounded-lg h-[40vh] bg-blue-200">
+      <h1 class="font-bold text-2xl">Student Portal</h1>
+      <div class=" w-full flex gap-3 justify-center items-center p-2">
+
+        <input placeholder="Enter youer Name..." type="text"  class="input" id="name">
+        <input placeholder="Enter youer Email..." type="email"  class="input" id="email" required>
+        <input placeholder="Enter youer phone Number..." type="tel" class="input" id="number">
+        <input placeholder="Enter youer Age..." type="text"  class="input" id="age">
+      </div>
+      <button class="buttonA" id="btn">
+        <span>Submit</span>
+      </button>
+
+    </div>
+    <div class="text w-full h-[50vh] flex flex-col p-2  bg-blue-400 rounded-lg mt-2" id="box">
+      <div class="add-data flex justify-center  overflow-y-auto items-center ">
+        <p class="w-[30%] p-2 h-[7vh]  bg-blue-200 mt-3">name</p>
+        <p class="w-[30%] p-2 h-[7vh]  bg-blue-200 mt-3">email</p>
+        <p class="w-[30%] p-2 h-[7vh]  bg-blue-200 mt-3">phone number</p>
+        <p class="w-[30%] p-2 h-[7vh]  bg-blue-200 mt-3">age</p>
+ 
+      </div>
+    </div>
+  </div>
+  <script type="module" src="app.js"></script>
+
+</body>
+
+</html>
