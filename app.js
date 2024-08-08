@@ -60,21 +60,21 @@ btn.addEventListener('click', async () => {
     console.log(s_name.value);
 
 
-setTimeout(async ()=>{
-        const querySnapshot = await getDocs(collection(db, "student data"));
-        querySnapshot.forEach((doc) => {
-           doc.data() is never undefined for query doc snapshots
-          console.log(doc.id, " => ", doc.data().email);
+// setTimeout(async ()=>{
+//         const querySnapshot = await getDocs(collection(db, "student data"));
+//         querySnapshot.forEach((doc) => {
+//            doc.data() is never undefined for query doc snapshots
+//           console.log(doc.id, " => ", doc.data().email);
            
-       box.innerHTML += `<div class="add-data flex justify-center  items-center ">
-               <p class="w-[30%] p-2  bg-blue-200 mt-3">${doc.data().name}</p>
-               <p class="w-[30%] p-2  bg-blue-200 mt-3">${doc.data().email}</p>
-            //  /  <p class="w-[30%] p-2  bg-blue-200 mt-3">${doc.data().number}</p>
-               <p class="w-[30%] p-2  bg-blue-200 mt-3">${doc.data().age}</p>
+//        box.innerHTML += `<div class="add-data flex justify-center  items-center ">
+//                <p class="w-[30%] p-2  bg-blue-200 mt-3">${doc.data().name}</p>
+//                <p class="w-[30%] p-2  bg-blue-200 mt-3">${doc.data().email}</p>
+//             //  /  <p class="w-[30%] p-2  bg-blue-200 mt-3">${doc.data().number}</p>
+//                <p class="w-[30%] p-2  bg-blue-200 mt-3">${doc.data().age}</p>
                 
-             </div>`
-       });
-   }, 3000);
+//              </div>`
+//        });
+//    }, 3000);
 }
 )
 
@@ -82,21 +82,21 @@ setTimeout(async ()=>{
 // get data
 
 
-// setTimeout(async ()=>{
-  //  const querySnapshot = await getDocs(collection(db, "student data"));
-   // querySnapshot.forEach((doc) => {
-      // doc.data() is never undefined for query doc snapshots
-    //   console.log(doc.id, " => ", doc.data().email);
+setTimeout(async ()=>{
+   const querySnapshot = await getDocs(collection(db, "student data"));
+   querySnapshot.forEach((doc) => {
+      doc.data() is never undefined for query doc snapshots
+      console.log(doc.id, " => ", doc.data().email);
         
-   // box.innerHTML += `<div class="add-data flex justify-center items-center ">
-    //        <p class="w-[30%] h-[7vh] bg-blue-200 mt-3">${doc.data().name}</p>
-          //  <p class="w-[30%] h-[7vh] bg-blue-200 mt-3">${doc.data().email}</p>
-      ////      <p class="w-[30%] h-[7vh] bg-blue-200 mt-3">${doc.data().number}</p>
-            //<p class="w-[30%] h-[7vh] bg-blue-200 mt-3">${doc.data().age}</p>
-            // <button class=" bg-blue-200  w-[7%]  h-[7vh]  text-gray-100 mt-3"  id="del" > <img class="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAKVJREFUSEvtlbERgzAMRZ8LNqFKVmAMhmAI+oyQyw6ZIQPQwx2zUJBzkcA5CAkfTgMubfk/6duWHYmHS6yPBVABdyERv/ZYS1IDFMALyASRAfAxjQQJAeNOln11/w7YqYBJRjqDWKt+9I4B+FQZ2rY0H2XRCVi8+nO/T4sOYNGWBmh+aC1w2aIMdMA13CM1uxK4AbkR0gM18LQCjLp6mPYn6wpKxBs0qysZAkh0fgAAAABJRU5ErkJggg=="/></button>
-         // </div>`
-  //  });
-//}, 3000);
+   box.innerHTML += `<div class="add-data flex justify-center items-center ">
+           <p class="w-[30%] h-[7vh] bg-blue-200 mt-3">${doc.data().name}</p>
+           <p class="w-[30%] h-[7vh] bg-blue-200 mt-3">${doc.data().email}</p>
+      //      <p class="w-[30%] h-[7vh] bg-blue-200 mt-3">${doc.data().number}</p>
+            <p class="w-[30%] h-[7vh] bg-blue-200 mt-3">${doc.data().age}</p>
+            <button class=" bg-blue-200  w-[7%]  h-[7vh]  text-gray-100 mt-3"  id="del" > <img class="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAKVJREFUSEvtlbERgzAMRZ8LNqFKVmAMhmAI+oyQyw6ZIQPQwx2zUJBzkcA5CAkfTgMubfk/6duWHYmHS6yPBVABdyERv/ZYS1IDFMALyASRAfAxjQQJAeNOln11/w7YqYBJRjqDWKt+9I4B+FQZ2rY0H2XRCVi8+nO/T4sOYNGWBmh+aC1w2aIMdMA13CM1uxK4AbkR0gM18LQCjLp6mPYn6wpKxBs0qysZAkh0fgAAAABJRU5ErkJggg=="/></button>
+         </div>`
+   });
+}, 3000);
 
 
 // delet button 
