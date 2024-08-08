@@ -65,7 +65,8 @@ btn.addEventListener('click', async () => {
         querySnapshot.forEach((doc) => {
           // doc.data() is never undefined for query doc snapshots
         //   console.log(doc.id, " => ", doc.data().email);
-        box.innerHTML += `<div class="add-data flex justify-center overflow-y-auto items-center ">
+            box.innerHTML = ''
+        box.innerHTML += `<div class="add-data flex justify-center  items-center ">
                 <p class="w-[30%] p-2  bg-blue-200 mt-3">${doc.data().name}</p>
                 <p class="w-[30%] p-2  bg-blue-200 mt-3">${doc.data().email}</p>
                 <p class="w-[30%] p-2  bg-blue-200 mt-3">${doc.data().number}</p>
